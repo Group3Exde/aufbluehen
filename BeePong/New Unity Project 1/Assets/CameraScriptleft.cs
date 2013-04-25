@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraScriptLeft : MonoBehaviour {
+public class CameraScriptleft : MonoBehaviour {
 	
 	public Transform target;
 	public float smooth = 2;
