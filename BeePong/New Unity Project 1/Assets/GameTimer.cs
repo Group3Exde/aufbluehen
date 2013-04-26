@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameTimer : MonoBehaviour {
 	public float timer = 60;
+	public int interval = 3;
 	private int gettime;
 	private string neu;
 	bool isover = false;
@@ -21,9 +22,11 @@ public class GameTimer : MonoBehaviour {
 		neu = gettime.ToString();
 		
 	
-	if(gettime % 6 == 0){
+	if(gettime % interval == 0){
 		float newscale_size = transform.localScale.x - 0.01f;
-		transform.localScale = new Vector3(newscale_size,transform.localScale.y,transform.localScale.z);
+		if(newscale_size > 0) {
+			transform.localScale = new Vector3(newscale_size,transform.localScale.y,transform.localScale.z);
+		}
 		//Debug.Log(newscale_size);
 			if(transform.localScale.x < 4){
 				isover = true;
