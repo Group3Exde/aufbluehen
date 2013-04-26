@@ -5,13 +5,9 @@ public class PongController : MonoBehaviour {
 	
 	private Vector3 beeOriginVelocity;
 	private bool istVelocityStored = false;
-	float timeroffset;
-	float timer = 2f;
-	bool gameOver = false;
 
 	// Use this for initialization
-	void Start () {
-		timeroffset = timer;
+	void Start () {		
 		Screen.showCursor = false;
 	}
 	
@@ -21,14 +17,6 @@ public class PongController : MonoBehaviour {
 		pos.x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x ;
 		this.transform.position = new Vector3(pos.x,this.transform.position.y,this.transform.position.z);
 		
-		//shrink pong
-		timer -= Time.deltaTime;
-  		if (timer <= 0)//<timer> seconds ellapsed
-		{			
-			timer = timeroffset;
-			this.transform.localScale = new Vector3(this.transform.localScale.x*0.9f, this.transform.localScale.y, this.transform.localScale.z); //pong shrinks
-		}
-
 	}
 	
     void OnCollisionEnter(Collision collision) {
