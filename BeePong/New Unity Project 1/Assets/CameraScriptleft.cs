@@ -39,7 +39,6 @@ public class CameraScriptleft : MonoBehaviour {
 		//this.transform.parent.position = new Vector3(Mathf.Lerp(camPos.x,target.position.x+50, Time.deltaTime*smooth), transform.parent.position.y, transform.parent.position.z);
 		moveCamera = true;
 		
-		
 	}
 	
 	void onTriggerExit(Collider other) {

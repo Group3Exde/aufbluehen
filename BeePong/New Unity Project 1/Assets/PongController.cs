@@ -8,11 +8,12 @@ public class PongController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {		
-		Screen.showCursor = false;
+		//Screen.showCursor = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {		
+	void Update () {
+		  Screen.showCursor = false;
 		Vector3 pos = new Vector3();
 		pos.x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x ;
 		this.transform.position = new Vector3(pos.x,this.transform.position.y,this.transform.position.z);
