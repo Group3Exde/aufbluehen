@@ -19,9 +19,15 @@ public class FloorCollision : MonoBehaviour {
 	}
 	void OnGUI(){
 		if(colide){
-		GUI.Box(new Rect(Screen.width/2, Screen.height/2,100,50), "GAME OVER");
-		GameObject sphere = GameObject.Find("Sphere");
-		if(sphere != null) GameObject.Destroy(sphere);
+			GUI.Box(new Rect(Screen.width/2, Screen.height/2,100,50), "GAME OVER");
+			if(GUI.Button(new Rect(Screen.width/2, Screen.height/2+20,100,30), "RESTART")) {
+				Screen.showCursor = true;
+				Application.LoadLevel (0); 
+			}
+			GameObject sphere = GameObject.Find("Sphere");
+			if(sphere != null) GameObject.Destroy(sphere);
+			GameObject pong = GameObject.Find ("Pong");
+			if(pong != null)  GameObject.Destroy(pong);
 		}
 	}
 }
