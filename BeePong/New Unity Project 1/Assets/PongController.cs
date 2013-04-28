@@ -4,11 +4,11 @@ using System.Collections;
 public class PongController : MonoBehaviour {
 	
 	private Vector3 beeOriginVelocity;
-	private bool istVelocityStored = false;
+	private bool isVelocityStored = false;
 
 	// Use this for initialization
-	void Start () {		
-		//Screen.showCursor = false;
+	void Start () {
+		Screen.showCursor = false;
 	}
 	
 	// Update is called once per frame
@@ -24,12 +24,11 @@ public class PongController : MonoBehaviour {
 		float velocity = collision.rigidbody.velocity.magnitude;
 		Vector3 colVelocity = collision.rigidbody.velocity;
 		colVelocity.x = (collision.transform.position.x -transform.position.x);
-		if(!istVelocityStored) {
+		if(!isVelocityStored) {
 			beeOriginVelocity = GameObject.Find("Sphere").transform.rigidbody.velocity;
-			istVelocityStored = true;
+			isVelocityStored = true;
 		}
 		colVelocity.y = beeOriginVelocity.y * 0.3f;
-		Debug.Log(colVelocity);
 		collision.rigidbody.velocity = colVelocity;
 		if (collision.rigidbody.velocity.magnitude < velocity) {
 			collision.rigidbody.velocity *= velocity/collision.rigidbody.velocity.magnitude;
