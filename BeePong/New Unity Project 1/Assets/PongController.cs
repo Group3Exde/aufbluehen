@@ -28,7 +28,7 @@ public class PongController : MonoBehaviour {
 			beeOriginVelocity = GameObject.Find("Sphere").transform.rigidbody.velocity;
 			isVelocityStored = true;
 		}
-		colVelocity.y = beeOriginVelocity.y * 0.2f;
+		colVelocity.y = beeOriginVelocity.y * 0.3f;
 		collision.rigidbody.velocity = colVelocity;
 		if (collision.rigidbody.velocity.magnitude < velocity) {
 			collision.rigidbody.velocity *= velocity/collision.rigidbody.velocity.magnitude;

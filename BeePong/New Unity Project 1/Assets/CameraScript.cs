@@ -25,7 +25,7 @@ public class CameraScript : MonoBehaviour {
 			Vector3 camPos = transform.parent.position;
 			if(target != null)
 			{
-				this.transform.parent.Translate((Time.deltaTime*target.rigidbody.velocity.x)+0.05f, 0, 0);
+				this.transform.parent.Translate((Time.deltaTime*target.rigidbody.velocity.x)+0.03f, 0, 0);
 			//<Debug.Log(transform.parent.position.x - target.position.x);
 				if(transform.parent.position.x - target.position.x > -0.7 && transform.parent.position.x - target.position.x < 0.7) {					
 					moveCamera = false;

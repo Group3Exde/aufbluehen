@@ -1,0 +1,13 @@
+FÜR BLOG:
+
+Biene hat Flügel verloren. Wir müssen ihr helfen genügend Nektar zu sammeln und zurück in den Bienestock zu kommen.
+Schwierigkeit des Spiels besteht ua. darin, dass sich der Balken immer verkleinert und somit sich das Verhalten ständig ändert.
+Schwierigkeiten beim Developen:
+-Kamera nachführen
+-Dimensionierung und Verhalten des Pongs (Kugel sollte nicht zu steil, aber auch nicht zu flach wegfliegen, "Schnitt")
+-Kugel bekam immer höhere y-Werte -> verlässt das Bild
+-richtige Auflösung finden: Spiel ist mit verschiedenen Auflösungen verschieden schwer
+
+
+TODO:
+Überprüfen, ob genügend Nektar gesammelt wurde, wenn man in den Bienenstock kommt
