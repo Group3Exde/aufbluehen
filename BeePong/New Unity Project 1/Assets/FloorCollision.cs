@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class FloorCollision : MonoBehaviour {
-	bool colide = false;
+	public bool colide = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,11 +17,11 @@ public class FloorCollision : MonoBehaviour {
 		colide = true;
 		}
 	}
-	void OnGUI(){
-		if(colide){
-		GUI.Box(new Rect(Screen.width/2, Screen.height/2,100,50), "GAME OVER");
-		GameObject sphere = GameObject.Find("Sphere");
-		if(sphere != null) GameObject.Destroy(sphere);
-		}
-	}
+//	void OnGUI(){
+//		if(colide){
+//		GUI.Box(new Rect(Screen.width/2, Screen.height/2,200,50), "GAME OVER");
+//		GameObject sphere = GameObject.Find("Sphere");
+//		if(sphere != null) GameObject.Destroy(sphere);
+//		}
+//	}
 }

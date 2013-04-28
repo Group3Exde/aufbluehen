@@ -21,7 +21,7 @@ public class BeeHiveController : MonoBehaviour {
 	
 	void OnGUI(){
 		if(colide){
-			GUI.Box(new Rect(Screen.width/2, Screen.height/2,100,50), "FINISHED!");
+			GUI.Box(new Rect(Screen.width/2, Screen.height/2,200,50), "FINISHED!");
 			GameObject sphere = GameObject.Find("Sphere");
 			if(sphere != null) GameObject.Destroy(sphere);	
 		}
