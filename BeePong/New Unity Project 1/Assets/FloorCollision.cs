@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class FloorCollision : MonoBehaviour {
-	public bool colide = false;
+	public bool colidee = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,10 +14,10 @@ public class FloorCollision : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.name == "Sphere"){
-		colide = true;
+		colidee = true;
 		}
 	}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //	void OnGUI(){
 //		if(colide){
 //		GUI.Box(new Rect(Screen.width/2, Screen.height/2,200,50), "GAME OVER");
@@ -25,9 +25,9 @@ public class FloorCollision : MonoBehaviour {
 //		if(sphere != null) GameObject.Destroy(sphere);
 //		}
 //	}
-=======
+//=======
 	void OnGUI(){
-		if(colide){
+		if(colidee){
 			Screen.showCursor = true;
 			GUI.Box(new Rect(Screen.width/2, Screen.height/2,100,50), "GAME OVER");
 			if(GUI.Button(new Rect(Screen.width/2, Screen.height/2+20,100,30), "RESTART")) {
@@ -39,5 +39,5 @@ public class FloorCollision : MonoBehaviour {
 			if(pong != null)  GameObject.Destroy(pong);
 		}
 	}
->>>>>>> refs/remotes/origin/BeePong
+//>>>>>>> refs/remotes/origin/BeePong
 }

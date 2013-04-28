@@ -8,6 +8,7 @@ public class GameTimer : MonoBehaviour {
 	private string lifetime;
 	bool isover = false;
 	GameObject floor;
+	GameObject beehive;
 	// Use this for initialization
 	void Start () {
 		
@@ -23,7 +24,7 @@ public class GameTimer : MonoBehaviour {
 		
     FloorCollision floorcol = floor.GetComponent<FloorCollision>(); 
 		
-		if(gettime >= 0 && !floorcol.colide){
+		if(gettime >= 0 && !floorcol.colidee){
 		timer -= Time.deltaTime;
 		gettime = Mathf.CeilToInt(timer);
 		lifetime = gettime.ToString();
@@ -38,6 +39,12 @@ public class GameTimer : MonoBehaviour {
 		float newscale_size = transform.localScale.x - 0.01f;
 		if(newscale_size > 0) {
 			transform.localScale = new Vector3(newscale_size,transform.localScale.y,transform.localScale.z);
+				if(newscale_size < 4){
+					renderer.material.color = Color.red;
+				}
+				else{
+					renderer.material.color = Color.green;
+				}
 		}
 		}
 		

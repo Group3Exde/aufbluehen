@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class BeeHiveController : MonoBehaviour {
-	bool colide = false;
+	public bool colide = false;
 	// Use this for initialization
 	void Start () {
 	
