@@ -36,7 +36,7 @@ public class GameTimer : MonoBehaviour {
 	
 	if(gettime % interval == 0){
 		float newscale_size = transform.localScale.x - 0.01f;
-		if(newscale_size > 0) {
+		if(newscale_size >= 0) {
 			transform.localScale = new Vector3(newscale_size,transform.localScale.y,transform.localScale.z);
 				//Change color of pong 
 				if(newscale_size < 4){
