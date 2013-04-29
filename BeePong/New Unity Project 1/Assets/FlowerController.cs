@@ -20,7 +20,7 @@ public class FlowerController : MonoBehaviour {
 		{
 			this.transform.localScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y+1.5f, this.transform.localScale.z);
 			GameObject pong = GameObject.Find("Pong");
-			pong.transform.localScale = new Vector3(pong.transform.localScale.x*1.3f, pong.transform.localScale.y, pong.transform.localScale.z);
+			pong.transform.localScale = new Vector3(pong.transform.localScale.x+1.3f, pong.transform.localScale.y, pong.transform.localScale.z);
 			IsGrowing = false;
 		}
 	}

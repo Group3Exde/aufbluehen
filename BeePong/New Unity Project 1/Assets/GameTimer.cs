@@ -25,15 +25,14 @@ public class GameTimer : MonoBehaviour {
     FloorCollision floorcol = floor.GetComponent<FloorCollision>(); 
 		
 		if(gettime >= 0 && !floorcol.colidee){
-		timer -= Time.deltaTime;
-		gettime = Mathf.CeilToInt(timer);
-		lifetime = gettime.ToString();
+			timer -= Time.deltaTime;
+			gettime = Mathf.CeilToInt(timer);
+			lifetime = gettime.ToString();
 		}
-		else {
-			isover = true;
-			lifetime = "0";
-		}
-		
+//		else {
+//			isover = true;
+//			lifetime = "0";
+//		}
 	
 	if(gettime % interval == 0){
 		float newscale_size = transform.localScale.x - 0.01f;
@@ -50,13 +49,13 @@ public class GameTimer : MonoBehaviour {
 		}
 		
 	}
-	void OnGUI(){
-		
-		GUI.Box(new Rect(2,5,200,50),"Timer: " + lifetime );
-		if(isover){
-		GUI.Box(new Rect(Screen.width/2, Screen.height/2,200, 50), "GAME OVER");
-		GameObject sphere = GameObject.Find("Sphere");
-		if(sphere != null) GameObject.Destroy(sphere);
-		}
-	}
+//	void OnGUI(){
+//		
+//		GUI.Box(new Rect(2,5,200,50),"Timer: " + lifetime );
+//		if(isover){
+//		GUI.Box(new Rect(Screen.width/2, Screen.height/2,200, 50), "GAME OVER");
+//		GameObject sphere = GameObject.Find("Sphere");
+//		if(sphere != null) GameObject.Destroy(sphere);
+//		}
+//	}
 }
